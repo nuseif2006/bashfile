@@ -1,0 +1,14 @@
+#!/bin/bash
+
+dir=$(pwd)
+echo "Enter file name:"
+read name
+if [[ $name == "" ]]
+then
+echo "Enter a proper name"
+create
+else
+echo "#!$SHELL" > $dir/$name
+chmod +x $name
+echo "File created: $name"
+fi
